@@ -1,0 +1,14 @@
+version: '24.0.7'
+
+services:
+  secret_word:
+    build: .
+    image: secret-word-image
+    container_name: secret-word-container
+    ports:
+      - 3000:3000
+    networks:
+      - secret-word-network
+
+networks:
+  secret-word-network:
